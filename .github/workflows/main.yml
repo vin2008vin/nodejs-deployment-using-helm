@@ -22,3 +22,4 @@ jobs:
        role-to-assume: ${{ secrets.AWS_IAM_ROLE }}
    - name: test aws credentals
      run: aws sts get-caller-identity 
+
