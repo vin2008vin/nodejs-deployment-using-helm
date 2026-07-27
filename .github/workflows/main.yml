@@ -23,3 +23,4 @@ jobs:
  
    - name: test aws credentals
      run: aws sts get-caller-identity 
+
