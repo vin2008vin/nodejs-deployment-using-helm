@@ -16,10 +16,11 @@ jobs:
    - name: checkout source
      uses: actions/checkout@v4
    - name: configuring aws credentials using OIDC
-     uses: aws-actions/configure-aws-credentials@v4.1.0
+     uses: aws-actions/configure-aws-credentials@v6.2.3
      with:
-       role-to-assume: arn:aws:iam::149219722594:role/github-action-role
        aws-region: ap-south-1
+       role-to-assume: arn:aws:iam::149219722594:role/github-action-role
+ 
    - name: test aws credentals
      run: aws sts get-caller-identity 
 
