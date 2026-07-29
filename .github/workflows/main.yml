@@ -2,7 +2,7 @@ name: OIDC demo
 
 on:
  push:
-  branches: ["mastedddr"]
+  branches: ["master"]
 
 permissions:
  id-token: write
@@ -20,8 +20,7 @@ jobs:
      with:
        aws-region: ap-south-1
        role-to-assume: ${{ secrets.AWS_IAM_ROLE }}
- 
    - name: test aws credentals
      run: aws sts get-caller-identity 
-
-
+     
+       
